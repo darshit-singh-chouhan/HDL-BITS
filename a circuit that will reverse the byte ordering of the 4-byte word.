@@ -1,0 +1,15 @@
+module top_module( 
+    input [31:0] in,
+    output [31:0] out );//
+   // wire [31:0]c;
+    //assign c={in[24:31],in[16:23],in[8:15],in[7:0]};
+    //assign c=out;
+    // assign out[31:24] = ...;
+    wire [7:0] a,b,c,d;
+    assign  a=in[7:0];
+    assign  b=in[15:8];
+    assign  c=in[23:16];
+    assign  d=in [31:24];
+    assign out[31:0]={d,c,b,a};
+                    
+endmodule
